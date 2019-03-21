@@ -19,8 +19,46 @@ $(document).ready(function() {
       } else {
         $('.animation').text("");
       }
+
     }).fail(function(error) {
       $('.showErrors').text(`There was an error processing your request: ${error.responseText}. Please try again.`);
+      $('.animation').text("")
+      $('.showTemp').text("")
+      $('.showHumidity').text("")
+    });
+
+    let place = city.split(",");
+    let placeStr = place[0].split(" ").join("-");
+    $.get(`https://api.teleport.org/api/urban_areas/slug:${placeStr}/images/`).then(function(response) {
+      let placeObj = response.photos[0].image.web;
+      // let placeObjTwo = placeObj[0];
+      $('.photos').text(`<img src="${placeObj}">`);
+      console.log(response)
+      // $('.photos').text(placeStr);
     });
   });
+
+
+  // $('#weatherLocation').click(function() {
+  //   let cityTwo = $('#location').val();
+  //   let place = cityTwo.split(",");
+  //   let placeStr = place[0].split(" ").join("-");
+  //   $.get(`https://api.teleport.org/api/urban_areas/slug:${placeStr}/images`).then(function(response) {
+  //     const placeObj = response.photos[1].web;
+  //     $('.photos').text(`<img src="${placeObj}">`);
+  //     $('.photos').text(cityTwo);
+  //     // if (response.weather[0].main === 'Clear') {
+  //     // } else {
+  //     //   $('.animation').text("");
+  //     // }
+  //   }).fail(function(error) {
+  //     // $('.showErrors').text(`There was an error processing your request: ${error.responseText}. Please try again.`);
+  //     // $('.animation').text("")
+  //     // $('.showTemp').text("")
+  //     // $('.showHumidity').text("")
+  //   });
+  // });
+
+  // https://d13k13wj6adfdf.cloudfront.net/urban_areas/baku_web-71bcbddb43.jpg
 });
+// });
