@@ -1,3 +1,5 @@
+import { SymptomQuery } from "../src/doctor-backend.js";
+
 $(document).ready(function() {
   $('#doctorSymptom').click(function() {
     let symptom = $('#symptom').val();
@@ -8,8 +10,16 @@ $(document).ready(function() {
     let promise = symptomQuery.getDoctorBySymptom(symptom);  // call the instance method and pass in user input
 
     promise.then(function(response) {
-      body = JSON.parse(response);
-      $('.showSymptom').text(body);
+      let body = JSON.parse(response);
+      let doctors = body.data;
+      // let doctorsArry = [];
+      let name = `${doctors[0].profile.first_name} ${doctors[0].profile.last_name}`
+      console.log(doctors[0].profile.first_name);
+      console.log(name);
+      doctors.forEach(function(doctor) {
+        console.log(`${doctor.profile.first_name} ${doctor.profile.last_name}`);
+      });
+      $('.showSymptom').text(doctors);
       // $('.showTemp').text(`The temperature in Kelvins is ${body.main.temp} degrees.`);
     }, function(error) {
       $('.showErrors').text(`There was an error processing your request: ${error.message}`);
