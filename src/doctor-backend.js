@@ -14,5 +14,16 @@ export class SymptomQuery {
       request.open("GET", url, true);
       request.send();
     });
+
+  }
+  getDoctorList(response) {
+    let body = JSON.parse(response);
+    let doctors = body.data;
+    let doctorsArry = [];
+    doctors.forEach(function(doctor) {
+      doctorsArry.push(`${doctor.profile.first_name} ${doctor.profile.last_name}`);
+      console.log(doctorsArry);
+    });
+    return doctorsArry;
   }
 }
