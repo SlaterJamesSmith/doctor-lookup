@@ -21,8 +21,18 @@ $(document).ready(function() {
       //   console.log(doctorsArry);
       // });
       let names = symptomQuery.getDoctorList(response);
-      names.forEach(function(name) {
-        $('.showSymptom').append(`<ol>${name}</ol>`)
+      let docObj = JSON.parse(response)
+      names.forEach(function(name, index) {
+        let phones = (docObj.data[index].practices[0].phones);
+        let phoneList = [];
+        phones.forEach(function(phone) {
+          phoneList.push(phone["type"]+ ":");
+          phoneList.push(phone["number"]);
+        });
+        console.log(phoneList);
+        let phoneStr = phoneList.join(" ");
+        $('.showSymptom').append(`<ol>${name}</ol><li>${phoneStr}</li>`)
+        console.log(docObj.data[index].practices[0].phones);
       })
       // $('.showSymptom').text(`Doctors who can help you with ${symptom} in Portland: ${doctorsArryNew.join(", ")}`);
 
