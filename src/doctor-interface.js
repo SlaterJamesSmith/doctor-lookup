@@ -20,8 +20,11 @@ $(document).ready(function() {
       //   doctorsArry.push(`${doctor.profile.first_name} ${doctor.profile.last_name}`);
       //   console.log(doctorsArry);
       // });
-      let doctorsArry2 = symptomQuery.getDoctorList(response);
-      $('.showSymptom').text(`Doctors who can help you with ${symptom} in Portland: ${doctorsArry2.join(", ")}`);
+      let names = symptomQuery.getDoctorList(response);
+      names.forEach(function(name) {
+        $('.showSymptom').append(`<ol>${name}</ol>`)
+      })
+      // $('.showSymptom').text(`Doctors who can help you with ${symptom} in Portland: ${doctorsArryNew.join(", ")}`);
 
     }, function(error) {
       $('.showErrors').text(`There was an error processing your request: ${error.message}`);
