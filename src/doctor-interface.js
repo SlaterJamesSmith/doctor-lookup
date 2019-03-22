@@ -12,14 +12,15 @@ $(document).ready(function() {
     promise.then(function(response) {
       let body = JSON.parse(response);
       let doctors = body.data;
-      // let doctorsArry = [];
       let name = `${doctors[0].profile.first_name} ${doctors[0].profile.last_name}`
       console.log(doctors[0].profile.first_name);
       console.log(name);
+      let doctorsArry = [];
       doctors.forEach(function(doctor) {
-        console.log(`${doctor.profile.first_name} ${doctor.profile.last_name}`);
+        doctorsArry.push(`${doctor.profile.first_name} ${doctor.profile.last_name}`);
+        console.log(doctorsArry);
       });
-      $('.showSymptom').text(doctors);
+      $('.showSymptom').text(`Doctors who can help you with ${symptom} in Portland: ${doctorsArry.join(", ")}`);
       // $('.showTemp').text(`The temperature in Kelvins is ${body.main.temp} degrees.`);
     }, function(error) {
       $('.showErrors').text(`There was an error processing your request: ${error.message}`);
