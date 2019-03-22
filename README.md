@@ -1,12 +1,12 @@
-## Galactic Age Calculator
+## Doctor Finder
 ---
-#### _Javascript practice, homework as assigned by Epicodus, 3/15/19_
+#### _Javascript practice, homework as assigned by Epicodus, 3/22/19_
 
 #### Slater Smith
 
 ### Description
 
-Javascript application to identify user's age on various planets in Earth's solar system based on birthdate and current date. Because each planet in the solar system carries a different solar year length, meaning that Earth, Mercury, Venus, Mars, and Jupiter are a length of 1, .24, .62, 1.88, and 11.86 Earth years long respectively. This application tells the user how 'old' they are on each of these planets, and how their age relates to their particular life expectancy calculated by planet year length.
+<!-- Javascript application to identify user's age on various planets in Earth's solar system based on birthdate and current date. Because each planet in the solar system carries a different solar year length, meaning that Earth, Mercury, Venus, Mars, and Jupiter are a length of 1, .24, .62, 1.88, and 11.86 Earth years long respectively. This application tells the user how 'old' they are on each of these planets, and how their age relates to their particular life expectancy calculated by planet year length. -->
 
 #### Program behavior specifications:
 | Behavior | Input | Output |
