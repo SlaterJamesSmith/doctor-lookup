@@ -1,8 +1,8 @@
 import $ from 'jquery';
-import 'bootstrap';
-import 'bootstrap/scss/bootstrap.scss';
+// import 'bootstrap';
+// import 'bootstrap/scss/bootstrap.scss';
 import './sass/styles.scss';
-import './weather-interface.js';
+import './doctor-interface.js';
 
 // $(document).ready(function(){
 //   $(").submit(function(event){
