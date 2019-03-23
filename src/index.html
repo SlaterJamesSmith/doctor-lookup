@@ -8,10 +8,21 @@
   <body>
     <div class="container">
       <h1>Find a doctor</h1>
+      <!-- <label for="refresh">Search Again!</label> -->
+      <!-- <button class="btn-success" id="doctorRefresh">Search Again!</button> -->
+
+      <div class="startingButtons">
       <label for="symptom">Enter a symptom:</label>
       <input id="symptom" type="text">
-      <button class="btn-success" id="doctorSymptom">Find a doctor!</button>
+      <button class="btn-success" id="doctorSymptom">Search by symptom!</button>
+
+      <label for="name">Enter a doctor's first or last name:</label>
+      <input id="name" type="text">
+      <button class="btn-success" id="doctorName">Search by name!</button>
+    </div>
+
       <div class="showSymptom"></div>
+      <div class="showName"></div>
       <div class="showErrors"></div>
       <!-- <div class="errors"></div> -->
       <!-- <div class="showTemp"></div>
