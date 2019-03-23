@@ -6,7 +6,7 @@
 
 ### Description
 
-<!-- Javascript application to identify user's age on various planets in Earth's solar system based on birthdate and current date. Because each planet in the solar system carries a different solar year length, meaning that Earth, Mercury, Venus, Mars, and Jupiter are a length of 1, .24, .62, 1.88, and 11.86 Earth years long respectively. This application tells the user how 'old' they are on each of these planets, and how their age relates to their particular life expectancy calculated by planet year length. -->
+Javascript application to match a user with a list of doctors in the Portland, Oregon utilizing using the BetterDoctor API.
 
 #### Program behavior specifications:
 | Behavior | Input | Output |
@@ -21,27 +21,28 @@
 ### Technologies and Resources
 
 * Javascript
-* Jasmine
-* Karma
+* BetterDoctor API
 * Webpack
 * npm
+* babel
 
 ### Setup Instructions
 
-<!-- 1. Clone this repository at https://github.com/SlaterJamesSmith/galactic-age-calc
+1. Clone this repository to your desktop at https://github.com/SlaterJamesSmith/doctor-lookup
 2. Use a terminal of your choice to access the webpage and its files by inputting: "git clone {the above clone link}"
 3. If homebrew is not yet installed on your Mac, install it by running the following command in your terminal: "$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 4. If you are not using a Mac, and homebrew is not yet installed, go to the node website and follow appropriate installer for your operating system at https://nodejs.org/en/download/
-5. In terminal, enter "$ npm i" to install node package manager
-6. In terminal, navigate into project by entering enter "$ cd co-working-project"
-7. Next, in terminal enter "$ npm run build"
-8. Open directory in preferred text editor and open galactic-calc.spec.js to view and/or modify specifications
-9. Run '$npm run test' in terminal to test specs. A new browser window should open to alert you to whether tests were run successfully -->
+5. In terminal, navigate into project by entering "$ cd doctor-lookup" into your terminal
+6. In terminal, enter "$ npm i" to install node package manager
+7. Next, in terminal enter "$ npm run build" and then "$ npm run start" - a web browser should automatically open with input prompts
+8. Follow the prompts to search for doctors based on symptom or doctor name
+9. Refresh page to try again
 
 
-### Roadmap
-<!-- This application still needs work before it can be considered complete. It still needs:
-* A front end interface, html, & styling -->
+### Roadmap & bugs
+This application still needs work before it can be considered complete. It's functional on a basic level, but has the following issues:
+* Though functional, front end logic is not dry. Some code may need to move to back end logic.
+* For some reason, the DOM will not read follow up user inputs after the first API request is called. For example, when I tried to build out a "try again" button, or simply tried to rerun the application without first refreshing the page, the buttons did not work at all. This is an issue that needs to be addressed.
 
 ### License
 
