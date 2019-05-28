@@ -42,9 +42,9 @@ Javascript application to match a user with a list of doctors in the Portland, O
 ### Roadmap & bugs
 This application still needs work before it can be considered complete. It's functional on a basic level, but has the following issues:
 * Though functional, front end logic is not dry. Some code may need to move to back end logic.
-* For some reason, the DOM will not read follow up user inputs after the first API request is called. For example, when I tried to build out a "try again" button, or simply tried to rerun the application without first refreshing the page, the buttons did not work at all. This is an issue that needs to be addressed.
+* For some reason, the DOM will not read follow up user inputs after the first API request is called. For example, when I tried to build out a "try again" button, or simply tried to rerun the application without first refreshing the page, the buttons did not work at all. This is an issue that needs to be addressed. **PROBLEM RESOLVED** The issue lies with the 'Replace HTML' code called in the JavaScript file. This issue has been identified, but not yet fixed in the project
 
 ### License
 
-*{This software is licensed under the MIT license}*
-Copyright (c) 2019 **_{Slater Smith}_**
+*This software is licensed under the MIT license*
+Copyright (c) 2019 **_Slater Smith_**
